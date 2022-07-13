@@ -1,4 +1,4 @@
-import "./ExpenseDate.css";
+import "../UI/ExpenseDate.css";
 
 import React from "react";
 

@@ -1,11 +1,14 @@
-import "./ExpenseItem.css";
-import Card from "./Card";
-
-import React from "react";
+import "../UI/ExpenseItem.css";
+import Card from "../Global/Card";
 import ExpenseDate from "./ExpenseDate";
 
-const ExpenseItem: React.FC<{ date: any; title: String; amount: String }> = (
-  { date, title, amount },
+interface Props {
+  date: Date;
+  title: String;
+  amount: String;
+}
+const ExpenseItem = (
+  { date, title, amount }: Props,
 ) => {
   return (
     <Card className="expense-item">

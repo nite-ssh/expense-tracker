@@ -1,4 +1,5 @@
-import Expenses from "./components/Expenses";
+import Expenses from "./components/Expenses/Expenses";
+import NewExpense from "./components/NewExpense/NewExpense";
 
 function App() {
   const expenses = [
@@ -28,8 +29,14 @@ function App() {
     },
   ];
 
+  const SavedExpensesDetails: Function = (savedDetails: any) => {
+    console.log(savedDetails);
+    console.log("from appjs");
+  };
+
   return (
     <div className="App">
+      <NewExpense savedExpenses={SavedExpensesDetails} />
       <Expenses expenses={expenses} />
     </div>
   );
