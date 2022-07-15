@@ -5,3 +5,10 @@
   width: 50rem;
   max-width: 95%;
 }
+
+.expenses-empty{
+    color:white;
+    text-align:center;
+    margin-top:2rem;
+
+}

@@ -1,5 +1,4 @@
-import "../UI/ExpenseFilter.css";
-
+import "../UI/ExpensesFilter.css";
 interface Props {
   selected: any;
   onChangeFilter: any;
@@ -12,8 +11,8 @@ const ExpensesFilter = (
     onChangeFilter(event.target.value);
   };
   return (
-    <div className="expense-filter">
-      <div className="expense-filter__control">
+    <div className="expenses-filter">
+      <div className="expenses-filter__control">
         <label htmlFor="">
           Filter By year
         </label>

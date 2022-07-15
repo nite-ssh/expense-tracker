@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "../UI/ExpenseForm.css";
 
-const ExpenseForm: React.FC<{ onSavedExpenseData: any }> = (
-  { onSavedExpenseData },
+const ExpenseForm = (
+  { onSavedExpenseData }: any,
 ) => {
   const [userInput, setUserInput] = useState({
     enteredTitle: "",
