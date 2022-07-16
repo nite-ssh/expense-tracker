@@ -33,7 +33,17 @@
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
+
 }
+
+i{
+    background-color:#2a2a2a;
+    border-radius:0.5rem;
+    padding:1rem;
+    color:crimson;
+}
+
+
 
 @media (min-width: 580px) {
   .expense-item__description {

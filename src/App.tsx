@@ -34,10 +34,18 @@ function App() {
     setExpenses([savedDetails, ...dummyData]);
   };
 
+  const onDelete = (value: any) => {
+    setExpenses(expenses.filter((expense) => {
+      return (
+        expense.title !== value.title
+      );
+    }));
+  };
+
   return (
     <div className="App">
       <NewExpense savedExpenses={SavedExpensesDetails} />
-      <Expenses expenses={expenses} />
+      <Expenses expenses={expenses} onDelete={onDelete} />
     </div>
   );
 }

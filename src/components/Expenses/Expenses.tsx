@@ -5,29 +5,22 @@ import { useState } from "react";
 import "../UI/Expenses.css";
 import ExpenseChart from "./ExpenseChart";
 
-interface expensesProps {
-  id: string;
-  title: string;
-  amount: number;
-  date: Date;
-}
-
-interface Props {
-  expenses: expensesProps[];
-}
-
 const Expenses = (
-  { expenses }: Props,
+  { expenses, onDelete }: any,
 ) => {
   const [filteredYear, setFilteredYear] = useState("2022");
 
-  const filteredExpense = expenses.filter((expense) =>
+  const filteredExpense = expenses.filter((expense: any) =>
     expense.date.getFullYear().toString() === filteredYear
   );
 
   const onEmpty = (
     <p className="expenses-empty">Sorry, No Expense Recorded for this date.</p>
   );
+
+  const deleteFromExpense = (deleteList: any) => {
+    onDelete(deleteList);
+  };
 
   return (
     <Card className="expenses">
@@ -48,6 +41,7 @@ const Expenses = (
               title={expense.title}
               amount={expense.amount.toString()}
               date={expense.date}
+              onClick={deleteFromExpense}
             />
           )
         );
